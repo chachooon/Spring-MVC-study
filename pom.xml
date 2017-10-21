@@ -27,6 +27,14 @@
 		<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
 		<version>1.16</version>
 	</dependency>
+	
+	<!-- 롬복 적용. -->
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.16.18</version>
+<!-- 		<scope>provided</scope> -->
+	</dependency>
 
 	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
