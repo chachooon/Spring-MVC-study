@@ -1,4 +1,4 @@
-package org.zerock.persistence;
+package org.zerock.controller;
 
 import java.util.*;
 
@@ -34,7 +34,7 @@ public class BoardDAOTest {
 	 @Test
 	 public void testCreate() throws Exception {
 	 BoardVO board = new BoardVO();
-	 board.setTitle("새로운 글을 넣습니다.");
+	 board.setTitle("글 등록 테스트.");
 	 board.setContent("새로운 글을 넣습니다.");
 	 board.setWriter("user00");
 	 dao.create(board);
