@@ -55,17 +55,17 @@
 		var formObj = $("form[role='form']");
 		console.log(formObj);
 		$(".btn-warning").on("click", function() {
-			formObj.attr("action", "/sboard/modifyPage");
+			formObj.attr("action", "/boards/modifyPage");
 			formObj.attr("method", "get");
 			formObj.submit();
 		});
 		$(".btn-danger").on("click", function() {
-			formObj.attr("action", "/sboard/removePage");
+			formObj.attr("action", "/boards/removePage");
 			formObj.submit();
 		});
 		$(".btn-primary").on("click", function() {
 			formObj.attr("method", "get");
-			formObj.attr("action", "/sboard/list");
+			formObj.attr("action", "/boards/list");
 			formObj.submit();
 		});
 	});
