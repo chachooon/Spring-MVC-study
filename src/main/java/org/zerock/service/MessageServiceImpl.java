@@ -17,7 +17,10 @@ public class MessageServiceImpl implements MessageService {
 	@Inject
 	private PointDAO pointDAO;
 
-	// @Transactional
+	/* @ Transactional 애노테이션의 적용 우선순위
+	 * : 1. 메소드  > 2. 클래스 > 3. 인터페이스
+	 */
+	@Transactional
 	@Override
 	public void addMessage(MessageVO vo) throws Exception {
 
