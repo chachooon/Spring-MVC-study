@@ -5,14 +5,21 @@ import java.util.Date;
 //import lombok.*;
 //@Getter @Setter @ToString
 public class BoardVO {
+
 	private Integer bno;
 	private String title;
 	private String content;
 	private String writer;
-	@Override
-	public String toString() {
-		return "BoardVO [bno=" + bno + ", title=" + title + ", content=" + content + ", writer=" + writer + ", regdate="
-				+ regdate + ", viewcnt=" + viewcnt + "]";
+	private Date regdate;
+	private int viewcnt;
+	private int replycnt;
+
+	public int getReplycnt() {
+		return replycnt;
+	}
+
+	public void setReplycnt(int replycnt) {
+		this.replycnt = replycnt;
 	}
 
 	public Integer getBno() {
@@ -63,18 +70,10 @@ public class BoardVO {
 		this.viewcnt = viewcnt;
 	}
 
-	private Date regdate;
-	private int viewcnt;
-
-	public BoardVO() {
-		this("", "", "");
-	}
-
-	public BoardVO(String title, String content, String writer) {
-		super();
-		this.title = title;
-		this.content = content;
-		this.writer = writer;
+	@Override
+	public String toString() {
+		return "BoardVO [bno=" + bno + ", title=" + title + ", content=" + content + ", writer=" + writer + ", regdate="
+				+ regdate + ", viewcnt=" + viewcnt + ", replycnt=" + replycnt + "]";
 	}
 
 }

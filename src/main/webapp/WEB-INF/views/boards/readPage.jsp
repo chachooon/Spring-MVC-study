@@ -72,8 +72,8 @@
 			<!-- The time line -->
 			<ul class="timeline">
 				<!-- timeline time label -->
-				<li class="time-label" id="repliesDiv"><span class="bg-green">
-						Replies List </span></li>
+				<li class="time-label" id="repliesDiv" style="cursor:pointer"><span class="bg-green">
+						Replies List <small id='replycntSmall'> [ ${boardVO.replycnt } ]</small></span></li>
 			</ul>
 
 			<div class='text-center'>
@@ -158,7 +158,11 @@
 		$.getJSON(pageInfo, function(data) {
 			printData(data.list, $("#repliesDiv"), $('#template'));
 			printPaging(data.pageMaker, $(".pagination"));
-			$("#modifyModal").modal('hide');
+			
+			$("#modifyModal").modal('hide');  
+			
+			// RepliesList버튼에 댓글삭제 이후의 댓글수 반영
+			$("#replycntSmall").html("[ "+ data.pageMaker.totalCount +" ]"); 
 		});
 	}
 	var printPaging = function(pageMaker, target) {

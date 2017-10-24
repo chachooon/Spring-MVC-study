@@ -19,5 +19,7 @@ public interface ReplyDAO {
       Integer bno, Criteria cri) throws Exception;
 
   public int count(Integer bno) throws Exception;
+  
+  public int getBno(Integer rno) throws Exception;
 
 }
