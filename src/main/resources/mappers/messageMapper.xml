@@ -13,12 +13,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="readMessage" resultType="MessageVO">
 		select * from tbl_message
-		where mid = #{mid}
+		where mno = #{mno}
 	</select>
 
 	<update id="updateState">
 		update tbl_message set opendate = now() 
-		where mid = #{mid}
+		where mno = #{mno}
 	</update>
 
 </mapper>

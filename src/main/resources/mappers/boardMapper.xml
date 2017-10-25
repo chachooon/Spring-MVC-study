@@ -123,4 +123,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update tbl_board set viewcnt = viewcnt +1 where bno = #{bno}
 	</update> 
 
+	<insert id="addAttach">
+		insert into tbl_attach(fullname, bno) values (#{fullName},Last_INSERT_ID())
+	</insert>
+	
+	<select id="getAttach" resultType="string">
+		select fullname from tbl_attach where bno = #{bno} order by regdate
+	</select>
 </mapper>

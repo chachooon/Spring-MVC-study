@@ -21,15 +21,15 @@ public class MessageDAOImpl implements MessageDAO {
 	}
 
 	@Override
-	public MessageVO readMessage(Integer mid) throws Exception {
+	public MessageVO readMessage(Integer mno) throws Exception {
 
-		return session.selectOne(namespace + ".readMessage", mid);
+		return session.selectOne(namespace + ".readMessage", mno);
 	}
 
 	@Override
-	public void updateState(Integer mid) throws Exception {
+	public void updateState(Integer mno) throws Exception {
 
-		session.update(namespace + ".upldateState", mid);
+		session.update(namespace + ".upldateState", mno);
 
 	}
 
